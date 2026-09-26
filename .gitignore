@@ -1,0 +1,16 @@
+.DS_Store
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+*.spec
+
+.github/
+plan.md
+progress.md
+
+android/.gradle/
+android/**/build/
+android/local.properties

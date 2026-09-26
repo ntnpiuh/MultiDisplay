@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "multidisplay"
+version = "0.1.0"
+description = "Turn smartphones and spare devices into virtual displays for macOS"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [
+    {name = "NTN", email = "ntnpiuh@example.com"},
+]
+keywords = ["multidisplay", "screen-sharing", "virtual-display", "macos", "python"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Operating System :: MacOS :: MacOS X",
+]
+
+dependencies = [
+    "pyobjc-framework-Quartz>=10.0; sys_platform == 'darwin'",
+    "pyobjc-framework-Cocoa>=10.0; sys_platform == 'darwin'",
+    "pyobjc-framework-WebKit>=10.0; sys_platform == 'darwin'",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "black",
+    "mypy",
+    "flake8",
+]
+
+[project.scripts]
+multidisplay = "multidisplay.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
