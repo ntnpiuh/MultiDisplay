@@ -84,4 +84,13 @@ Android: Kotlin Activity hosting a browser-native MJPEG receiver
 
 ## License
 
-MIT License - See LICENSE file for details.
+MultiDisplay is released under the [MIT License](LICENSE).
+
+## Security
+
+MultiDisplay is intended for a trusted local network. The dashboard stays on
+`127.0.0.1` by default, while the Android receiver uses HTTP and a pairing
+code because it must be reachable over Wi-Fi or ADB reverse. Do not expose the
+receiver port to the public Internet or share the pairing code. See
+[SECURITY.md](SECURITY.md) for the deployment model and private vulnerability
+reporting process.

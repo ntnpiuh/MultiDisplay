@@ -7,7 +7,7 @@ name = "multidisplay"
 version = "0.1.0"
 description = "Turn smartphones and spare devices into virtual displays for macOS"
 readme = "README.md"
-license = {text = "MIT"}
+license = {file = "LICENSE"}
 requires-python = ">=3.9"
 authors = [
     {name = "NTN", email = "ntnpiuh@example.com"},
